@@ -1,0 +1,203 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"> 
+
+<HTML lang=en xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<HEAD>
+  <TITLE>SIT Health Screening</TITLE>
+  <LINK class=user rel=stylesheet type=text/css href="style/header.css">
+  <LINK class=user rel=stylesheet type=text/css href="style/base.css">
+  <META content="text/html; charset=UTF-8" http-equiv=Content-Type>
+  
+  <script type="text/javascript" language="javascript">	
+	
+	function showdata()
+	{
+		document.getElementById("resulttbl").style.display = 'block';	
+	}
+	
+	function showmessage()
+	{
+		alert("Saved successfully.");	
+		var frm = document.getElementsByName('upload_result')[0];   
+		frm.reset();  
+		document.getElementById("stuid").innerHTML = "";
+		document.getElementById("meddate").disabled = false;
+		document.getElementById("meddate").value = '';
+		document.getElementById("meddate").disabled = true;
+		//return false;
+		document.documentElement.scrollTop = 0;
+	}
+	
+	</script> 
+</HEAD>
+
+<BODY>
+<!--<FORM method="post" name="upload_result">--><FORM name="upload_result">
+
+	<DIV id="header">	
+	<div style="padding-right:20px;text-align:right;"><img src="img/mm_logo.png" style="width:200px;"></div>	
+	<DL class="user_title" style="right:1230px;"><DD>Upload Result</DD></DL>		
+	</DIV>
+
+	<DIV id="content">	
+	<DIV id="main">
+	
+		<DIV id="main_countents">
+			Student ID<label style="color:red;">*</label>
+			<input type="text" style="width:200px;">&nbsp;&nbsp;&nbsp;<INPUT class="btn" value="Search" onclick="showdata()" type="button">
+			<br/><br/>
+			
+			<table id="resulttbl" style="display:none">				
+				<tr style="height:30px;">							
+					<td>Student ID</td>
+					<td>&nbsp;</td>
+					<td><label id="stuid">SIT00001</label></td>
+				</tr>				
+				<tr style="height:30px;">
+					<td>MedEx Date</td>
+					<td>&nbsp;</td>
+					<td><input id="meddate" type="text" value="15/05/2020" disabled="disabled" style="width:282px;"></td>
+				</tr>
+				<tr style="height:30px;">
+					<td>Medical History<label style="color:red;">*</label></td>
+					<td>&nbsp;</td>
+					<td><textarea rows="5" cols="42"></textarea></td>
+				</tr>						
+				<tr style="height:40px;">
+					<td>Remarks by Student</td>
+					<td>&nbsp;</td>
+					<td><textarea rows="5" cols="42"></textarea></td>
+				</tr>
+				<tr style="height:30px;">
+					<td>Visual Acuity<label style="color:red;">*</label></td>
+					<td>&nbsp;</td>
+					<td><input type="text" style="width:282px;"></td>
+				</tr>
+				<tr style="height:30px;">
+					<td>Physical Examination<label style="color:red;">*</label></td>
+					<td>&nbsp;</td>
+					<td><input type="text" style="width:282px;"></td>
+				</tr>
+				<tr style="height:30px;">
+					<td>Blood Pressure<label style="color:red;">*</label></td>
+					<td>&nbsp;</td>
+					<td><input type="text" style="width:282px;"></td>
+				</tr>
+				<tr style="height:30px;">
+					<td>Urine test<label style="color:red;">*</label></td>
+					<td>&nbsp;</td>
+					<td><input type="text" style="width:282px;"></td>
+				</tr>
+				<tr style="height:30px;">
+					<td>Chest x-ray<label style="color:red;">*</label></td>
+					<td>&nbsp;</td>
+					<td><input type="text" style="width:282px;"></td>
+				</tr>
+				<tr style="height:30px;">
+					<td>Audio<label style="color:red;">*</label></td>
+					<td>&nbsp;</td>
+					<td><input type="text" style="width:282px;"></td>
+				</tr>
+				<tr style="height:30px;">
+					<td>HIV<label style="color:red;">*</label></td>
+					<td>&nbsp;</td>
+					<td><input type="text" style="width:282px;"></td>
+				</tr>
+				<tr style="height:30px;">
+					<td>TB<label style="color:red;">*</label></td>
+					<td>&nbsp;</td>
+					<td><input type="text" style="width:282px;"></td>
+				</tr>
+				<tr style="height:30px;">
+					<td>Hep A<label style="color:red;">*</label></td>
+					<td>&nbsp;</td>
+					<td><input type="text" style="width:282px;"></td>
+				</tr>
+				<tr style="height:30px;">
+					<td>Hep B<label style="color:red;">*</label></td>
+					<td>&nbsp;</td>
+					<td><input type="text" style="width:282px;"></td>
+				</tr>
+				<tr style="height:30px;">
+					<td>Hep C<label style="color:red;">*</label></td>
+					<td>&nbsp;</td>
+					<td><input type="text" style="width:282px;"></td>
+				</tr>
+				<tr style="height:30px;">
+					<td>MMR<label style="color:red;">*</label></td>
+					<td>&nbsp;</td>
+					<td><input type="text" style="width:282px;"></td>
+				</tr>
+				<tr style="height:30px;">
+					<td>Pertusis<label style="color:red;">*</label></td>
+					<td>&nbsp;</td>
+					<td><input type="text" style="width:282px;"></td>
+				</tr>
+				<tr style="height:30px;">
+					<td>Poliomyelitis<label style="color:red;">*</label></td>
+					<td>&nbsp;</td>
+					<td><input type="text" style="width:282px;"></td>
+				</tr>
+				<tr style="height:30px;">
+					<td>Tuberculosis<label style="color:red;">*</label></td>
+					<td>&nbsp;</td>
+					<td><input type="text" style="width:282px;"></td>
+				</tr>
+				<tr style="height:30px;">
+					<td>Varicella<label style="color:red;">*</label></td>
+					<td>&nbsp;</td>
+					<td><input type="text" style="width:282px;"></td>
+				</tr>
+				<tr style="height:30px;">
+					<td>FBC<label style="color:red;">*</label></td>
+					<td>&nbsp;</td>
+					<td><input type="text" style="width:282px;"></td>
+				</tr>
+				<tr style="height:30px;">
+					<td>Status</td>
+					<td>&nbsp;</td>
+					<td>
+						<select name="status" style="height:23px; width:100px;">											
+						<option value="1" selected>Fit</option>
+						<option value="2">Unfit</option>
+						<option value="3">Pending</option>
+						</select>
+					</td>
+				</tr>
+				<tr style="height:30px;">
+					<td>Remarks<label style="color:red;">*</label></td>
+					<td>&nbsp;</td>
+					<td><textarea rows="5" cols="42"></textarea></td>
+				</tr>
+				<!--<tr style="height:30px;">
+					<td>Upload Consent PDF<label style="color:red;">*</label></td>
+					<td>&nbsp;</td>
+					<td><input type="file" style="width:282px;"></td>
+				</tr>-->
+				<tr style="height:30px;">
+					<td>Upload Report PDF<label style="color:red;">*</label></td>
+					<td>&nbsp;</td>
+					<td><input type="file" style="width:282px;"></td>
+				</tr>				
+				<tr>
+					<td style="height:20px;"></td>
+				</tr>
+				
+				<tr>
+				<td colspan="2">
+					<INPUT class="btn" value="Save" onclick="showmessage()" type="button">
+					
+				</td>
+				</tr>
+															
+			</table>
+		</DIV>	
+	</DIV>
+	</DIV>
+
+	<!--<DIV id="main_footer">
+		<P>Copyright Singapore Institute of Technology 2020</P>
+	</DIV>-->
+
+</FORM>
+</BODY>
+</HTML>

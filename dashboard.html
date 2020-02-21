@@ -1,0 +1,280 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"> 
+
+<HTML lang=en xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<HEAD>
+  <TITLE>Xxx Health Screening</TITLE>
+  <LINK class=user rel=stylesheet type=text/css href="style/header.css">
+  <LINK class=user rel=stylesheet type=text/css href="style/base.css">
+  <META content="text/html; charset=UTF-8" http-equiv=Content-Type>
+  
+  <script type="text/javascript" language="javascript">	 
+	function changeColor(idObj,color)
+    {
+        document.getElementById(idObj.id).style.background = color;		
+    }
+	
+	function showData() {	
+	
+        if( document.getElementById("row1").style.display=='none' ){
+   document.getElementById("row1").style.display = 'table-row';
+   document.getElementById("row2").style.display = 'table-row';
+   document.getElementById("row3").style.display = 'table-row';
+   document.getElementById("row4").style.display = 'table-row';
+   document.getElementById("row5").style.display = 'table-row';
+   document.getElementById("row6").style.display = 'table-row';
+   document.getElementById("row7").style.display = 'table-row';
+   document.getElementById("row8").style.display = 'table-row';
+   document.getElementById("row9").style.display = 'table-row';
+   
+ }else{
+   document.getElementById("row1").style.display = 'none';
+   document.getElementById("row2").style.display = 'none';
+   document.getElementById("row3").style.display = 'none';
+   document.getElementById("row4").style.display = 'none';
+   document.getElementById("row5").style.display = 'none';
+   document.getElementById("row6").style.display = 'none';
+   document.getElementById("row7").style.display = 'none';
+   document.getElementById("row8").style.display = 'none';
+   document.getElementById("row9").style.display = 'none';
+ }
+    }
+	</script> 
+</HEAD>
+
+
+<BODY>
+
+<DIV id="header">		
+<div style="padding-right:20px;text-align:right;"><img src="img/mm_logo.png" style="width:200px;"></div>
+<DL style="font-size:1.4em;padding-left:120px;"><DD>Dashboard</DD></DL>	<!--<DL class="user_title" style="right:1250px;"><DD>Dashboard</DD></DL>-->
+
+	<!--<FORM method="post" name="fm_logout" action="./admin-login.html">
+		<INPUT class="logout_btn" onclick="" value=logout type=submit>
+	</FORM>-->
+</DIV>
+<div style="text-align:right; padding-top:50px;">
+	<!--<FORM method="post" name="fm_logout" action="./admin-login.html"><INPUT class="btn" onclick="" value=logout type=submit></FORM>-->
+	<FORM name="fm_logout"><input type="button" onclick="location.href='admin-login.html';" class="btn" value="logout" style="margin-right:10%;" /></FORM>	
+</div>
+
+<DIV id="content">	
+<DIV id="main">
+
+<DIV id="main_countents">	
+	<table>
+		<tr>
+			<td style="height:7px;">Student ID: <INPUT type="text" value="" style="width:100px;"></td>
+			<td>&nbsp;</td>
+			<td>
+			Status: 
+			<select name="status" style="height:23px; width:100px;">
+			<option value="0" selected>All</option>
+			<option value="1">Pending</option>
+			<option value="2">Fit</option>
+			<option value="3">Unfit</option>
+			</select> 
+			</td>
+			<td>&nbsp;</td>
+			<td>
+			Course: 
+			<select name="course" style="height:23px; width:200px;">
+			<option value="0" selected>All</option>
+			<option value="1">Diagnostic Radiography</option>
+			<option value="2">Radiation Therapy</option>
+			<option value="3">Occupational Therapy</option>
+			<option value="4">Physiotherapy</option>
+			<option value="5">Dietics & Nutrition</option>
+			<option value="6">Speech & Language Therapy</option>			
+			</select> 
+			</td>	
+			<td>&nbsp;</td>			
+			<td >			
+			<INPUT class="btn" value="Search" onclick="showData();" type="button"> &nbsp;&nbsp;
+			<INPUT class="btn" value="Download As Excel" onclick="window.open('summary.xlsx')" type="button" style="width:150px;">
+			</td>
+		</tr>
+	</table>
+	<table border="0">
+		<tr>
+			<td style="height:20px;">			
+			</td>			
+		</tr>	
+							
+		<tr>
+			<td><!--<DIV style="width:800px;overflow:scroll;overflow-y:hidden;overflow-x:scroll;white-space: nowrap">-->				
+				<table width="1200px" id="resultTable" cellspacing="0" cellpadding="0">
+					<tr class="table_header">
+						<td style="width:70px;">Student ID</td>
+						<td style="width:150px;">Name</td>
+						<!--<td style="width:100px;">Email</td>-->
+						<td style="width:70px;">Contact No.</td>
+						<td style="width:200px;">Course</td>
+						<td style="width:50px;">Status</td>							
+						<td style="width:150px;">Remarks</td>						
+						<td style="width:50px;">Date MedEx</td>
+						<!--<td style="width:70px;">Consent PDF</td>-->
+						<td style="width:100px;">Download Report</td>						
+					</tr>
+					<tr style="background-color:#f5f5f5; border-top:1px solid #ddd;">
+						<td class="td_left">Xxx00001</td>
+						<td class="td_left">xxx xxxxx</td>
+						<!--<td class="td_left">xxxxx</td>-->
+						<td>xxxxx</td>
+						<td class="td_left">Diagnostic Radiography</td>
+						<td class="td_left">Fit</td>							
+						<td class="td_left">Normal</td>						
+						<td class="td_right">15/05/2020</td>						
+						<!--<td class="td_center"><INPUT class="btn" value="download" onclick="window.open('consent.pdf')" type="button" style="width:70px; height:25px; font-size:14px;"></td>-->
+						<td class="td_center"><INPUT class="btn" value="download" onclick="window.open('report.pdf')" type="button" style="width:70px; height:25px; font-size:14px;"></td>	
+					</tr>
+					<tr id="row1">
+						<td class="td_left">Xxx00002</td>
+						<td class="td_left">xxx xxxxx</td>
+						<!--<td class="td_left">xxxxx</td>-->
+						<td>xxxxx</td>
+						<td class="td_left">Physiotherapy</td>
+						<td class="td_left">Fit</td>							
+						<td class="td_left">Normal</td>						
+						<td class="td_right">15/05/2020</td>						
+						<!--<td class="td_center"><INPUT class="btn" value="download" type="button" style="width:70px; height:25px; font-size:14px;"></td>-->
+						<td class="td_center"><INPUT class="btn" value="download" type="button" style="width:70px; height:25px; font-size:14px;"></td>	
+					</tr>
+					<tr id="row2" style="background-color:#f5f5f5; border-top:1px solid #ddd;">
+						<td class="td_left">Xxx00003</td>
+						<td class="td_left">xxx xxxxx</td>
+						<!--<td class="td_left">xxxxx</td>-->
+						<td>xxxxx</td>
+						<td class="td_left">Radiation Therapy</td>
+						<td class="td_left">Fit</td>							
+						<td class="td_left">Normal</td>						
+						<td class="td_right">15/05/2020</td>						
+						<!--<td class="td_center"><INPUT class="btn" value="download" type="button" style="width:70px; height:25px; font-size:14px;"></td>-->
+						<td class="td_center"><INPUT class="btn" value="download" type="button" style="width:70px; height:25px; font-size:14px;"></td>	
+					</tr>
+					<tr id="row3">
+						<td class="td_left">Xxx00004</td>
+						<td class="td_left">xxx xxxxx</td>
+						<!--<td class="td_left">xxxxx</td>-->
+						<td>xxxxx</td>
+						<td class="td_left">Physiotherapy</td>
+						<td class="td_left">Fit</td>							
+						<td class="td_left">Normal</td>						
+						<td class="td_right">15/05/2020</td>						
+						<!--<td class="td_center"><INPUT class="btn" value="download" type="button" style="width:70px; height:25px; font-size:14px;"></td>-->
+						<td class="td_center"><INPUT class="btn" value="download" type="button" style="width:70px; height:25px; font-size:14px;"></td>	
+					</tr>
+					<tr id="row4" style="background-color:#f5f5f5; border-top:1px solid #ddd;">
+						<td class="td_left">Xxx00005</td>
+						<td class="td_left">xxx xxxxx</td>
+						<!--<td class="td_left">xxxxx</td>-->
+						<td>xxxxx</td>
+						<td class="td_left">Radiation Therapy</td>
+						<td class="td_left">Fit</td>							
+						<td class="td_left">Normal</td>						
+						<td class="td_right">15/05/2020</td>						
+						<!--<td class="td_center"><INPUT class="btn" value="download" type="button" style="width:70px; height:25px; font-size:14px;"></td>-->
+						<td class="td_center"><INPUT class="btn" value="download" type="button" style="width:70px; height:25px; font-size:14px;"></td>	
+					</tr>
+					<tr id="row5">
+						<td class="td_left">Xxx00006</td>
+						<td class="td_left">xxx xxxxx</td>
+						<!--<td class="td_left">xxxxx</td>-->
+						<td>xxxxx</td>
+						<td class="td_left">Occupational Therapy</td>
+						<td class="td_left">Pending</td>							
+						<td class="td_left">xxxxx</td>						
+						<td class="td_right">15/05/2020</td>						
+						<!--<td class="td_center"><INPUT class="btn" value="download" type="button" style="width:70px; height:25px; font-size:14px;"></td>-->
+						<td class="td_center"><INPUT class="btn" value="download" type="button" style="width:70px; height:25px; font-size:14px;"></td>	
+					</tr>
+					<tr id="row6" style="background-color:#f5f5f5; border-top:1px solid #ddd;">
+						<td class="td_left">Xxx00007</td>
+						<td class="td_left">xxx xxxxx</td>
+						<!--<td class="td_left">xxxxx</td>-->
+						<td>xxxxx</td>
+						<td class="td_left">Speech & Language Therapy</td>
+						<td class="td_left">Fit</td>							
+						<td class="td_left">Normal</td>						
+						<td class="td_right">15/05/2020</td>						
+						<!--<td class="td_center"><INPUT class="btn" value="download" type="button" style="width:70px; height:25px; font-size:14px;"></td>-->
+						<td class="td_center"><INPUT class="btn" value="download" type="button" style="width:70px; height:25px; font-size:14px;"></td>	
+					</tr>
+					<tr id="row7">
+						<td class="td_left">Xxx00008</td>
+						<td class="td_left">xxx xxxxx</td>
+						<!--<td class="td_left">xxxxx</td>-->
+						<td>xxxxx</td>
+						<td class="td_left">Radiation Therapy</td>
+						<td class="td_left">Fit</td>							
+						<td class="td_left">Normal</td>						
+						<td class="td_right">15/05/2020</td>						
+						<!--<td class="td_center"><INPUT class="btn" value="download" type="button" style="width:70px; height:25px; font-size:14px;"></td>-->
+						<td class="td_center"><INPUT class="btn" value="download" type="button" style="width:70px; height:25px; font-size:14px;"></td>	
+					</tr>
+					<tr id="row8" style="background-color:#f5f5f5; border-top:1px solid #ddd;">
+						<td class="td_left">Xxx00009</td>
+						<td class="td_left">xxx xxxxx</td>
+						<!--<td class="td_left">xxxxx</td>-->
+						<td>xxxxx</td>
+						<td class="td_left">Occupational Therapy</td>
+						<td class="td_left">Unfit</td>							
+						<td class="td_left">xxxxx</td>						
+						<td class="td_right">15/05/2020</td>						
+						<!--<td class="td_center"><INPUT class="btn" value="download" type="button" style="width:70px; height:25px; font-size:14px;"></td>-->
+						<td class="td_center"><INPUT class="btn" value="download" type="button" style="width:70px; height:25px; font-size:14px;"></td>	
+					</tr>
+					<tr id="row9">
+						<td class="td_left">Xxx00010</td>
+						<td class="td_left">xxx xxxxx</td>
+						<!--<td class="td_left">xxxxx</td>-->
+						<td>xxxxx</td>
+						<td class="td_left">Speech & Language Therapy</td>
+						<td class="td_left">Fit</td>							
+						<td class="td_left">Normal</td>						
+						<td class="td_right">15/05/2020</td>						
+						<!--<td class="td_center"><INPUT class="btn" value="download" type="button" style="width:70px; height:25px; font-size:14px;"></td>-->
+						<td class="td_center"><INPUT class="btn" value="download" type="button" style="width:70px; height:25px; font-size:14px;"></td>	
+					</tr>					
+												
+				</table><!--</DIV>-->
+				
+			</td>
+		</tr>
+			<tr>
+				<td></td>
+			</tr>
+			<tr>
+				<td class="t_right">
+					<A href="./dashboard.html"><U>Previous</U></A>
+					<A href="./dashboard.html"><U>1</U></A>
+					<A href="./dashboard.html"><U>2</U></A>
+					<A href="./dashboard.html"><U>3</U></A>
+					<A href="./dashboard.html"><U>4</U></A>
+					<A href="./dashboard.html"><U>5</U></A>
+					<A href="./dashboard.html"><U>6</U></A>
+					<A href="./dashboard.html"><U>7</U></A>
+					<A href="./dashboard.html"><U>Next</U></A>
+				</td>
+			</tr>
+			<tr>
+				<td  style="height:7px;">
+				</td>
+			</tr>
+			<!--<tr>
+				<td >
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<INPUT class="btn"  value="Search" onclick="" type="button">
+				</td>
+			</tr>-->
+			
+	</table>
+	</DIV>
+</DIV>
+</DIV>
+
+<!--
+<DIV id="main_footer">
+	<P>Copyright</P>
+</DIV>-->
+</FORM>
+</BODY>
+</HTML>

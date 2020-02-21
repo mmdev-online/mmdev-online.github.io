@@ -1,0 +1,172 @@
+HTML {
+	OVERFLOW-Y: scroll
+}
+BODY {
+	MARGIN: 0px; FONT-SIZE: 16px;
+	FONT-FAMILY:Calibri;/*MS PGothic;*/
+}
+A IMG {
+	BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-TOP: medium none; BORDER-RIGHT: medium none
+}
+H1 {
+	MARGIN-TOP: 0px; FONT-SIZE: 1.6em
+}
+INPUT[type=submit] {
+	MARGIN: 5px 5px 5px 0px; FONT-FAMILY:Calibri; FONT-SIZE: 14px; CURSOR: pointer;text-align:center;width:90px;height:28px;vertical-align:middle;
+}
+INPUT[type=reset] {
+	MARGIN: 5px 5px 5px 0px; FONT-FAMILY:Calibri; FONT-SIZE: 14px; CURSOR: pointer;text-align:center;width:90px;height:28px;vertical-align:middle;
+}
+INPUT[type=button] {
+	MARGIN: 5px 5px 5px 0px; FONT-FAMILY:Calibri; FONT-SIZE: 14px; CURSOR: pointer;text-align:center;width:90px;height:28px;vertical-align:middle;
+}
+INPUT[type=text] {
+	PADDING-LEFT: 1px; FONT-SIZE: 11px;height:16px;
+}
+INPUT[type=password] {
+	PADDING-LEFT: 1px; FONT-SIZE: 11px;height:16px;
+}
+TEXTAREA {
+	PADDING-LEFT: 1px; FONT-SIZE: 11px
+}
+SELECT {
+	FONT-SIZE: 13px
+}
+.tableControl {
+	WIDTH: 100%
+}
+.actionButtons {
+	WIDTH: 100%
+}
+.tableControl A {
+	PADDING-LEFT: 10px
+}
+.tableControl {
+	TEXT-ALIGN: right
+}
+.footer {
+	TEXT-ALIGN: center; MARGIN-BOTTOM: 10px; FONT-SIZE: 11px
+}
+.rich-table {
+	WIDTH: 100%
+}
+.body {
+	PADDING-BOTTOM: 30px; PADDING-LEFT: 30px; PADDING-RIGHT: 30px; PADDING-TOP: 30px
+}
+.message {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; PADDING-BOTTOM: 0px; LIST-STYLE-TYPE: none; MARGIN: 5px 0px 8px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BACKGROUND: none transparent scroll repeat 0% 0%; COLOR: #000000; FONT-SIZE: 12px; BORDER-TOP: 0px; LIST-STYLE-IMAGE: none; BORDER-RIGHT: 0px; PADDING-TOP: 0px
+}
+.message LI {
+	PADDING-LEFT: 20px; BACKGROUND: no-repeat left center; MARGIN-LEFT: 3px; PADDING-TOP: 1px
+}
+.message LI.infomsg {
+	BACKGROUND-IMAGE: url(../img/msginfo.png)
+}
+.message LI.errormsg {
+	BACKGROUND-IMAGE: url(../img/msgerror.png)
+}
+.message LI.warnmsg {
+	BACKGROUND-IMAGE: url(../img/msgwarn.png)
+}
+.name {
+	PADDING-BOTTOM: 5px; MARGIN-TOP: 3px; PADDING-LEFT: 5px; WIDTH: 115px; PADDING-RIGHT: 5px; FLOAT: left; CLEAR: left; VERTICAL-ALIGN: top; FONT-WEIGHT: bold; PADDING-TOP: 5px
+}
+.value {
+	PADDING-BOTTOM: 5px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; FLOAT: left; PADDING-TOP: 5px
+}
+.error {
+	PADDING-BOTTOM: 5px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; FLOAT: left; PADDING-TOP: 5px
+}
+.errors {
+	COLOR: #ff0000; VERTICAL-ALIGN: middle
+}
+IMG.errors {
+	PADDING-RIGHT: 5px
+}
+.errors INPUT {
+	BORDER-BOTTOM: red 1px solid; BORDER-LEFT: red 1px solid; BORDER-TOP: red 1px solid; BORDER-RIGHT: red 1px solid
+}
+.errors TEXTAREA {
+	BORDER-BOTTOM: red 1px solid; BORDER-LEFT: red 1px solid; BORDER-TOP: red 1px solid; BORDER-RIGHT: red 1px solid
+}
+.errors SELECT {
+	BORDER-BOTTOM: red 1px solid; BORDER-LEFT: red 1px solid; BORDER-TOP: red 1px solid; BORDER-RIGHT: red 1px solid
+}
+.required {
+	PADDING-LEFT: 2px; COLOR: #ff0000
+}
+.rich-stglpanel-body {
+	OVERFLOW: auto
+}
+.rich-panel INPUT[type=submit] {
+	MARGIN-BOTTOM: 0px
+}
+.rich-panel INPUT[type=button] {
+	MARGIN-BOTTOM: 0px
+}
+.rich-tabpanel INPUT[type=submit] {
+	MARGIN-BOTTOM: 0px
+}
+.rich-tabpanel INPUT[type=button] {
+	MARGIN-BOTTOM: 0px
+}
+.tableControl INPUT[type=submit] {
+	MARGIN: 5px 0px 5px 5px
+}
+.tableControl INPUT[type=button] {
+	MARGIN: 5px 0px 5px 5px
+}
+.tableControl SELECT {
+	MARGIN: 5px 0px 5px 5px
+}
+.tableControl SELECT {
+	POSITION: relative; MARGIN-LEFT: 2px; TOP: 1px
+}
+.actionButtons {
+	PADDING-LEFT: 1px
+}
+.actionButtons SELECT {
+	MARGIN: 5px 5px 5px 0px; VERTICAL-ALIGN: bottom
+}
+.rich-toolbar-item A {
+	TEXT-DECORATION: none
+}
+.rich-toolbar-item A:hover {
+	TEXT-DECORATION: underline
+}
+.rich-ddmenu-label-select {
+	TEXT-DECORATION: underline
+}
+.rich-toolbar-item .rich-menu-item A:hover {
+	TEXT-DECORATION: none
+}
+.rich-datalist {
+	LIST-STYLE-TYPE: square; MARGIN: 6px 0px 1px; PADDING-LEFT: 18px
+}
+.rich-list-item {
+	PADDING-BOTTOM: 4px
+}
+DIV.info {
+	FONT-SIZE: 1.2em
+}
+/*UL.bullets {
+	LIST-STYLE-TYPE: square
+}
+UL.bullets LI {
+	PADDING-BOTTOM: 2px
+}*/
+TD.action {
+	TEXT-ALIGN: center; WIDTH: 8em; WHITE-SPACE: nowrap
+}
+TD.action A {
+	PADDING-LEFT: 1px; PADDING-RIGHT: 1px
+}
+TABLE.radio {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; BORDER-TOP: 0px; BORDER-RIGHT: 0px
+}
+TABLE.radio TD {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 2px; PADDING-RIGHT: 2px; PADDING-TOP: 0px
+}
+TABLE.radio INPUT[type=radio] {
+	VERTICAL-ALIGN: bottom
+}
